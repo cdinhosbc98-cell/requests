@@ -548,6 +548,10 @@ to hang indefinitely::
     received on the underlying socket for ``timeout`` seconds). If no timeout is specified explicitly, requests do
     not time out.
 
+A single numeric timeout value applies to both the connection and read
+timeouts. To set them separately, pass a tuple:
+``timeout=(connect_timeout, read_timeout)``. See :ref:`timeouts` for details.
+
 
 Errors and Exceptions
 ---------------------
